@@ -17,12 +17,21 @@ class Testuser(unittest.TestCase):
         '''
         self.assertEqual(self.new_user.userName,"diane-mahoro")
         self.assertEqual(self.new_user.password,"diane-mahoro")
-    def save_user_account(self):
+    def test_save_user_account(self):
         '''
         This test case test wether the user account of
         a user is saved
         '''
         self.new_user.save_account()
         self.assertEqual(len(User.user_account),1)
+    def test_multiple_account(self):
+        '''
+        this test case tocheck if we can save multiple 
+        accounts
+        '''
+        self.new_user.save_account()
+        another_account=User("shema yvan","yvan-buravan")
+        another_account.save_account()
+        self.assertEqual(len(User.user_account),2)
 if __name__ == '__main__':
     unittest.main()
