@@ -18,3 +18,12 @@ class User:
         this method deletes an account
         '''
         User.user_account.remove(self)
+    @classmethod
+    def find_by_name(cls,name):
+        '''
+        this method takes in the username and returns
+        the account with the same name
+        '''
+        for i in cls.user_account:
+            if User.userName == name:
+                return User
