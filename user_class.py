@@ -13,3 +13,8 @@ class User:
         this method is for saving a user's acount
         '''
         User.user_account.append(self)
+    def delete_acc(self):
+        '''
+        this method deletes an account
+        '''
+        User.user_account.remove(self)
