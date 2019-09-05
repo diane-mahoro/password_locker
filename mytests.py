@@ -36,7 +36,7 @@ class Testuser(unittest.TestCase):
         another_account=User("shema yvan","yvan-buravan")
         another_account.save_account()
         self.assertEqual(len(User.user_account),2)
-    def delete_account(self):
+    def test_delete_account(self):
         '''
         this test case check wether a user can delete the 
         account
