@@ -15,4 +15,7 @@ class Testuser(unittest.TestCase):
         test_init is a test case to check whether an
         object is initialized properly
         '''
-        
+        self.assertEqual(self.new_user.userName,"diane-mahoro")
+        self.assertEqual(self.new_user.password,"diane-mahoro")
+if __name__ == '__main__':
+    unittest.main()
