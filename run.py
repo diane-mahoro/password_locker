@@ -35,3 +35,16 @@ def display_accs():
 def main():
     print("A WARM WELCOME TO YOU FOR CHOOSING TO USE OUR SERVICE, Trust me here we keepyour credentials very safely.")
     print("Use this short codes: cc - sing up for an account, lg - to log in your account")
+    
+    short_code = input().lower()
+    if short_code == 'cc':
+        print("User Name")
+        u_name=string(input().lower())
+        print("enter your password")
+        mypass=string(input())
+        save_accounts(create_account(u_name,mypass))
+    else print("wrong inputs")
+if __name__ == '__main__':
+
+    main()
+
