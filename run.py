@@ -32,3 +32,6 @@ def display_accs():
     this function display accounts 
     '''
     return User.display_acc()
+def main():
+    print("A WARM WELCOME TO YOU FOR CHOOSING TO USE OUR SERVICE, Trust me here we keepyour credentials very safely.")
+    print("Use this short codes: cc - sing up for an account, lg - to log in your account")
