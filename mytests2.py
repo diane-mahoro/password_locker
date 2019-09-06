@@ -23,5 +23,15 @@ class TestCledentials(unittest.TestCase):
         '''
         self.new_cledential.save_cledential()
         self.assertEqual(len(Cledentials.cledential_list),1)
+
+    def test_multiple_cledentials(self):
+        '''
+        this case checks if more cledentials can be 
+        saved
+        '''
+        self.new_cledential.save_cledential()
+        another_cledential=Cledentials("istagram","mubiligi diane","d123456789")
+        another_cledential.save_cledential()
+        self.assertEqual(len(Cledentials.cledential_list),2)
 if __name__ == '__main__':
     unittest.main()
