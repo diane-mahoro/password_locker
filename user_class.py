@@ -30,7 +30,7 @@ class User:
     @classmethod
     def account_saved(cls,name):
         '''
-        this method checks wether the account is
+        this method checks wether the account is there
         using name
         '''
         for i in cls.user_account:

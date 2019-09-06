@@ -16,3 +16,19 @@ def delete_accounts(acc):
     this function deletes the account of a user
     '''
     acc.delete_acc()
+def find_accounts(name):
+    '''
+    This finds the account
+    '''
+    return User.find_by_name(name)
+def check_on_acc(name):
+    '''
+    This function checks if an account exists using
+    name
+    '''
+    return User.account_saved(name)
+def display_accs():
+    '''
+    this function display accounts 
+    '''
+    return User.display_acc()
