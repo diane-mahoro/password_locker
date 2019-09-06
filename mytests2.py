@@ -15,5 +15,13 @@ class TestCledentials(unittest.TestCase):
         self.assertEqual(self.new_cledential.type,"Facebook")
         self.assertEqual(self.new_cledential.user_name,"Mubiligi Diane")
         self.assertEqual(self.new_cledential.password,"di123456789")
+    
+    def test_save_cledential(self):
+        '''
+        this case checks if the cledential is added
+        to to the list
+        '''
+        self.new_cledential.save_cledential()
+        self.assertEqual(len(Cledentials.cledential_list),1)
 if __name__ == '__main__':
     unittest.main()
