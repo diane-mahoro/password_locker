@@ -27,3 +27,13 @@ class User:
         for i in cls.user_account:
             if i.userName == name:
                 return i
+    @classmethod
+    def account_saved(cls,name):
+        '''
+        this method checks wether the account is
+        using name
+        '''
+        for i in cls.user_account:
+            if i.userName == name:
+                return True
+        return False

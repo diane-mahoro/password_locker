@@ -56,5 +56,15 @@ class Testuser(unittest.TestCase):
         another_account.save_account()
         find_acc=User.find_by_name("shema yvan")
         self.assertEqual(find_acc.password,another_account.password)
+    def test_account_saved(self):
+        '''
+        This test case checks wether the account is saved
+        or not
+        '''
+        self.new_user.save_account()
+        another_account=User("shema yvan","yvan-buravan")
+        another_account.save_account()
+        accounts_saved=User.account_saved("shema yvan")
+        self.assertTrue(accounts_saved)
 if __name__ == '__main__':
     unittest.main()
