@@ -24,6 +24,12 @@ class TestCledentials(unittest.TestCase):
         self.new_cledential.save_cledential()
         self.assertEqual(len(Cledentials.cledential_list),1)
 
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            Cledentials.cledential_list=[]
+
     def test_multiple_cledentials(self):
         '''
         this case checks if more cledentials can be 
