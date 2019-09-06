@@ -59,5 +59,21 @@ class TestCledentials(unittest.TestCase):
         another_cledential.save_cledential()
         find_cledential=Cledentials.find_by_type("instagram")
         self.assertEqual(find_cledential.password,another_cledential.password)
+
+    def test_cledential_exists(self):
+        '''
+        this test case checks if a cledential exists
+        '''
+         self.new_cledential.save_cledential()
+        another_cledential=Cledentials("instagram","mubiligi diane","d123456789")
+        another_cledential.save_cledential()
+        cledential_exists=Cledentials.cledential_exist("instgram")
+    
+    def test_display_cledentials(self):
+        '''
+        this case checks if the cledentials saved can be
+        displayed
+        '''
+        self.assertEqual(Cledentials.display_cledential(),Cledentials.cledential_list)
 if __name__ == '__main__':
     unittest.main()
