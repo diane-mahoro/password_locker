@@ -19,3 +19,12 @@ class Cledentials:
         this method deleted a cledential
         '''
         Cledentials.cledential_list.remove(self)
+    @classmethod
+    def find_by_type(cls,account_type):
+        '''
+        this method takes in account type and returns
+        that account that matches that type
+        '''
+        for i in cls.cledential_list:
+            if i.type == account_type:
+                return i

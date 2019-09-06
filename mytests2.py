@@ -40,14 +40,24 @@ class TestCledentials(unittest.TestCase):
         another_cledential.save_cledential()
         self.assertEqual(len(Cledentials.cledential_list),2)
 
-    def delete_cledential(self):
+    def test_delete_cledential(self):
         '''
         this case checks if a cledential can be deleted
         '''
         self.new_cledential.save_cledential()
         another_cledential=Cledentials("istagram","mubiligi diane","d123456789")
         another_cledential.save_cledential()
-        self.another_cledential.delete_cledential()
+        another_cledential.delete_cledential()
         self.assertEqual(len(Cledentials.cledential_list),1)
+
+    def test_find_cledentials(self):
+        '''
+        this case checks if you can find your cledentials
+        '''
+        self.new_cledential.save_cledential()
+        another_cledential=Cledentials("instagram","mubiligi diane","d123456789")
+        another_cledential.save_cledential()
+        find_cledential=Cledentials.find_by_type("instagram")
+        self.assertEqual(find_cledential.password,another_cledential.password)
 if __name__ == '__main__':
     unittest.main()
