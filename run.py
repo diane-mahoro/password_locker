@@ -39,11 +39,17 @@ def main():
     short_code = input().lower()
     if short_code == 'cc':
         print("User Name")
-        u_name=string(input().lower())
+        u_name=input()
         print("enter your password")
-        mypass=string(input())
+        mypass=input()
         save_accounts(create_account(u_name,mypass))
-    else print("wrong inputs")
+    elif short_code == 'lg':
+        print("enter your user name")
+        u_name=input()
+        print("enter your password")
+        mypass=input()
+    else:
+        print("invalid input")
 if __name__ == '__main__':
 
     main()
