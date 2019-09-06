@@ -37,3 +37,9 @@ class User:
             if i.userName == name:
                 return True
         return False
+    @classmethod
+    def display_acc(cls):
+        '''
+        This method is for displaying accounts
+        '''
+        return cls.user_account

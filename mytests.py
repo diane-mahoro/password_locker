@@ -66,5 +66,11 @@ class Testuser(unittest.TestCase):
         another_account.save_account()
         accounts_saved=User.account_saved("shema yvan")
         self.assertTrue(accounts_saved)
+    def test_display_accounts(self):
+        '''
+        This test case checks wether the account can be
+        displayed
+        '''
+        self.assertEqual(User.display_acc(),User.User.user_account)
 if __name__ == '__main__':
     unittest.main()
