@@ -54,7 +54,7 @@ class Testuser(unittest.TestCase):
         self.new_user.save_account()
         another_account=User("shema yvan","yvan-buravan")
         another_account.save_account()
-        find_acc=User.find_by_name("diane-mahoro")
-        self.assertEqual(find_acc.password,new_user.password)
+        find_acc=User.find_by_name("shema yvan")
+        self.assertEqual(find_acc.password,another_account.password)
 if __name__ == '__main__':
     unittest.main()

@@ -25,5 +25,5 @@ class User:
         the account with the same name
         '''
         for i in cls.user_account:
-            if User.userName == name:
-                return User
+            if i.userName == name:
+                return i
