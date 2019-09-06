@@ -71,6 +71,6 @@ class Testuser(unittest.TestCase):
         This test case checks wether the account can be
         displayed
         '''
-        self.assertEqual(User.display_acc(),User.User.user_account)
+        self.assertEqual(User.display_acc(),User.user_account)
 if __name__ == '__main__':
     unittest.main()
