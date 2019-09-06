@@ -14,3 +14,8 @@ class Cledentials:
         this method save the cledential in the list
         '''
         Cledentials.cledential_list.append(self)
+    def delete_cledential(self):
+        '''
+        this method deleted a cledential
+        '''
+        Cledentials.cledential_list.remove(self)
