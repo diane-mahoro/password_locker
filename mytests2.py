@@ -64,7 +64,7 @@ class TestCledentials(unittest.TestCase):
         '''
         this test case checks if a cledential exists
         '''
-         self.new_cledential.save_cledential()
+        self.new_cledential.save_cledential()
         another_cledential=Cledentials("instagram","mubiligi diane","d123456789")
         another_cledential.save_cledential()
         cledential_exists=Cledentials.cledential_exist("instgram")

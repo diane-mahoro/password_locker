@@ -39,7 +39,7 @@ class Cledentials:
                 return True
         return False
     @classmethod
-    def display_cledentials(cls):
+    def display_cledential(cls):
         '''
         this method returns the cledentials list
         '''
