@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 from user_class import User
+from cledential_class import Cledential
 def create_account(userName,password):
     '''
     This function creates a new account for a user
@@ -32,6 +33,38 @@ def display_accs():
     this function display accounts 
     '''
     return User.display_acc()
+def create_cledential(type,user_name,password):
+    '''
+    function to create a credential
+    '''
+    new_cledential=Cledential(type,user_name,password)
+    return new_cledential
+def save_cledentials(cledential):
+    '''
+    this function save the cledential
+    '''
+    cledential.save_cledential()
+def delete_cledentials(cledential):
+    '''
+    this function deletes the cledential
+    '''
+    cledential.delete_cledential()
+def find_cledential(type):
+    '''
+    this function deletes a cledential
+    '''
+    return Cledential.find_by_type(type)
+def existing(type):
+    '''
+    this checks if an account exists
+    '''
+    return Cledential.cledential_exist(type)
+
+def display_credentials():
+    '''
+    function returns all cledentials
+    '''
+    return Cledential.display_cledential()
 def main():
     print("A WARM WELCOME TO YOU FOR CHOOSING TO USE OUR SERVICE, Trust me here we keepyour credentials very safely.")
     print("Use this short codes: cc - sing up for an account, lg - to log in your account")
