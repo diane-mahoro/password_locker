@@ -17,3 +17,20 @@ account that will enable him/her to create a credential account, display the alr
 
 - Git and Github
 
+### Set up instructions
+
+In order to be able to use this app you will have to 
+
+- open your terminal 
+
+- type in **$ ./run.py** and press enter 
+
+- Then you will interact with up using the instructions given
+
+### Contacts
+
+- Phone number: 0780630503/0722320394
+
+- Email: www.diammah7@gmail.com
+
+### Licenced under terms of Mahoro Diane
